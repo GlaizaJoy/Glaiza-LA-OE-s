@@ -1,0 +1,52 @@
+﻿class VideoGameCharacter:
+    def __init__(self, name, health, level):
+        self.name = name
+        self.health = health
+        self.level = level
+        self.attack_power = self.level * 5
+   
+    def attack(self):
+        self.attack_power = self.level * 5
+   
+    def __str__(self):
+        return f"Video Game Character: {self.name}\n Health: {self.health}\n Level: {self.level}\n {self.name} attacks with power: {self.attack_power}\n"
+
+
+class Fighter(VideoGameCharacter):
+    def __init__(self, name, health, level, weapon):
+        super().__init__(name, health, level)
+        self.weapon = weapon
+        self.special_attack_power = (self.level * 5) * 3
+   
+    def attack(self):
+        self.special_attack_power = (self.level * 5) * 3
+   
+    def __str__(self):
+        return f"Fighter: {self.name}\n Health: {self.health}\n Level: {self.level}\n Weapon: {self.weapon}\n {self.name} uses {self.weapon} Attacks with power: {self.special_attack_power}\n"
+
+
+class Mage(VideoGameCharacter):
+    def __init__(self, name, health, level, spell):
+        super().__init__(name, health, level)
+        self.spell = spell
+        self.spell_attack_power = (self.level * 5) * 2
+   
+    def attack(self):
+        self.spell_attack_power = (self.level * 5) * 2
+   
+    def __str__(self):
+        return f"Mage: {self.name}\n Health: {self.health}\n Level: {self.level}\n Spell: {self.spell}\n {self.name} casts {self.spell} Attacking with power: {self.spell_attack_power}\n"
+
+
+
+
+Mario = VideoGameCharacter("Mario", 100, 5)
+Ryu = Fighter("Ryu", 150, 7, "Shoryuken")
+Gandalf = Mage("Gandalf", 80, 6, "Fireball")
+
+
+
+
+for char in (Mario, Ryu, Gandalf):
+    char.attack()
+    print(char)

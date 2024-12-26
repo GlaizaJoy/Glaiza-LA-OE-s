@@ -1,0 +1,14 @@
+﻿LEARNING ASSESSMENT #6
+
+
+
+
+class laptop():
+    def __init__(self,brand,model):
+        pass
+   
+    def laptop_info(self):
+        pass
+   
+ok = laptop("Acer", "Aspire")
+print(ok.laptop_info())

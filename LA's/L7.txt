@@ -1,0 +1,21 @@
+﻿LEARNING ASSESSMENT #7
+
+
+
+
+class Car():
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+
+porsche = Car("Porsche", "Purple")
+print(porsche.color)
+
+
+porsche.color = "Gray"
+print(porsche.color)
+
+
+bmw = Car("BMW", "Black")
+print(bmw.color)

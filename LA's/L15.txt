@@ -1,0 +1,52 @@
+﻿LA#15
+
+
+
+
+class Dog:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print(f" Animal Name: {self.name} Speak: Barks!")
+
+
+class Cat:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print(f" Animal Name: {self.name} Speak: Meow!")
+
+
+class Bird:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print(f" Animal Name: {self.name} Speak: Chirp!")
+class Cat:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print(f" Animal Name: {self.name} Speak: Meow!")
+
+
+class Fish:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        return f" Animal Name: {self.name} Speak: ..."
+
+
+dog = Dog("Brownie")
+cat = Cat("Lawrence")
+bird = Bird("Twittwit")
+fish = Fish("Fishda")
+
+
+def animal_sounds(animal):
+    animal.speak()
+   
+animals = [dog, cat, bird, fish]
+count = 0
+while count < len(animals):
+    animal_sounds(animals[count])
+    count +=1

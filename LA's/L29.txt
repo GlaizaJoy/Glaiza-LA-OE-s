@@ -1,0 +1,23 @@
+﻿import tkinter as tk
+
+
+anime_title = "Fairy Tale"
+root = tk.Tk()
+root.title("My favorite anime is")
+root.geometry("500x300")
+
+
+counter = 0
+def gawin_mo_to():
+    global counter
+    print(f"My favorite anime is {anime_title}")
+    counter +=1
+
+
+button_ito = tk.Button(root, text="Run", command=gawin_mo_to)
+button_ito.grid(row=0, column=0)
+
+
+
+
+root.mainloop()
